@@ -1,0 +1,88 @@
+@font-face {
+        font-family: "JupiteroidLight";
+        src: url("fonts/jupiteroid-font/JupiteroidRegular.ttf") format('truetype');
+}
+
+nav {
+	font-family: JupiteroidLight, Tahoma, 'Trebuchet MS', Arial, sans-serif;
+	font-size: min(1.6em, 2.85vw);
+	position: fixed;
+	transition: top 1s;
+	width: 100%;
+	height: 80px;
+	padding-bottom: 20px;
+	z-index: 3;
+	color: white;
+	background-color: rgba(220, 220, 220, 0.6);
+	-webkit-backdrop-filter: blur(5px);
+	backdrop-filter: blur(5px);
+	
+	--mask: linear-gradient(180deg, rgba(0,0,0,1) 75%, rgba(0,0,0,0) 100%);
+
+	-webkit-mask-image: var(--mask);
+	mask-image: var(--mask);
+}
+
+.logo { 
+	float: left;
+	height: 100%;
+	width: auto;
+}
+
+nav .buttons { 
+	float: right;
+	display: flex;
+	margin-right: 5px;
+	height: 100%;
+	align-items: center
+}
+
+@property --angle {
+	syntax: '<angle>';
+	initial-value: 0deg;
+	inherits: false;
+}
+
+nav .buttoncontainer {
+	display: inline;
+	margin: 0 5px 0 5px;
+	transition: padding 1s, margin 1s;
+	background-color: white;
+	background-image: linear-gradient(var(--angle), rgba(255,255,255,1) 0%, rgba(0,0,0,1) 100%);
+        animation: rotategradient 2s infinite linear;
+	border-radius: 10px;
+	text-decoration: none;
+	color: inherit;
+}
+
+nav .buttoncontainer:hover { 
+	padding: 5px;
+	margin: 0px;
+	transition: padding 1s, margin 1s;
+}
+
+nav .buttoncontainer div {
+	background-color: #434343;
+	padding: 3px;
+	padding-top: max(3px, calc(25px - 2vw));
+	padding-bottom: max(3px, calc(25px - 2vw));
+	border-radius: 5px;
+}
+
+@keyframes rotategradient {
+	from { --angle: 0deg; }
+	to { --angle: 360deg; }
+}
+
+@media(max-width: 525px) {
+	nav {
+		height: auto;
+		font-size: 1.6em;
+	}
+	.logo { 
+		display: none;
+	}
+	nav .buttons {
+		flex-flow: column;
+	}
+}

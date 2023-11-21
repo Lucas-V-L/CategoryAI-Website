@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en"> <head>
+	<link rel="stylesheet" href="header-min.css">
+	<link rel="stylesheet" href="banner.css">
+	<link rel="stylesheet" href="main.css">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+
+<nav id="navbar">
+        <input id="hamburger" name="hamburger" type="checkbox"/>
+	<label class="hamburger" for="hamburger"></label>
+	<div class="buttons">
+		<a class="buttoncontainer" href="about.html"><div>About</div></a>
+		<a class="buttoncontainer" href="uses.html"><div><nobr>Use Cases</nobr></div></a>
+		<a class="buttoncontainer" href="platform.html"><div>Platform</div></a>
+		<a class="buttoncontainer" href="investor_info.html"><div><nobr>Investor Info</nobr></div></a>
+		<a class="buttoncontainer" href="team.html"><div>Team</div></a>
+		<a class="buttoncontainer" href="contact.html"><div>Contact</div></a>
+		<a class="buttoncontainer home" id="selected"><div>Home</div></a>
+	</div>
+	<a href="index.html" class="logocontainer"><img class="logo" src="img/logo-small-transparent.png"/></a>
+</nav>
+
+<body>
+	<div class="bannercontainer">
+		<div class="boxcontainer">
+			<div class="box" id="box">
+				<div class="top"></div>
+				<div class="bottom"></div>
+				<div class="left"></div>
+				<div class="right"></div>
+				<div class="front"></div>
+			</div>
+
+			<script>
+				var elem = document.querySelector('#box');
+				for (let i = 0; i < 110; i++) {
+					var clone = elem.cloneNode(true);
+					clone.removeAttribute('id');
+					clone.style.setProperty("--animation-delay", (Math.random()*3)+"s");
+					clone.style.setProperty("--animation-duration", ((Math.random()*3)+1)+"s");
+					elem.after(clone);
+				}
+				var prevScrollpos = window.pageYOffset;
+				const mediaQuery = window.matchMedia('(min-width: 681px)');
+				const checkBox = document.getElementById("hamburger");
+				window.onscroll = function() {
+					var currentScrollPos = window.pageYOffset;
+					if (prevScrollpos > currentScrollPos) {
+						document.getElementById("navbar").style.top = "0";
+					} else if(mediaQuery.matches || ! checkBox.checked) {
+						document.getElementById("navbar").style.top = "-100px";
+					}
+					prevScrollpos = currentScrollPos;
+				}
+				window.onresize = function() {
+					if(mediaQuery.matches){
+						checkBox.checked = false;
+					}
+				}
+			</script>
+		</div>
+		<div class="bannertext">
+			<h1>CATEGORY.AI</h1>
+			<p><nobr>The only all-in-one supply chain</nobr> <nobr>solution which puts AI first.</nobr></p>
+		</div>
+	</div>
+
+	<main> 
+		<h1>Hello!</h1> 
+		<p>filler</p><p>filler</p><p>filler</p><p>filler</p><p>filler</p><p>filler</p><p>filler</p><p>filler</p><p>filler</p><p>filler</p><p>filler</p><p>filler</p><p>filler</p><p>filler</p><p>filler</p><p>filler</p><p>filler</p><p>filler</p><p>filler</p><p>filler</p><p>filler</p><p>filler</p><p>filler</p><p>filler</p><p>filler</p><p>filler</p><p>filler</p><p>filler</p><p>filler</p><p>filler</p><p>filler</p><p>filler</p><p>filler</p><p>filler</p><p>filler</p><p>filler</p><p>filler</p><p>filler</p><p>filler</p><p>filler</p><p>filler</p><p>filler</p><p>filler</p><p>filler</p><p>filler</p><p>filler</p><p>filler</p><p>filler</p><p>filler</p><p>filler</p><p>filler</p><p>filler</p><p>filler</p><p>filler</p><p>filler</p><p>filler</p><p>filler</p><p>filler</p><p>filler</p><p>filler</p><p>filler</p><p>filler</p><p>filler</p><p>filler</p><p>filler</p><p>filler</p><p>filler</p><p>filler</p><p>filler</p><p>filler</p><p>filler</p><p>filler</p><p>filler</p><p>filler</p><p>filler</p><p>filler</p><p>filler</p><p>filler</p><p>filler</p><p>filler</p><p>filler</p><p>filler</p><p>filler</p><p>filler</p><p>filler</p><p>filler</p><p>filler</p><p>filler</p><p>filler</p><p>filler</p><p>filler</p>	
+	</main>
+
+</body></html>
