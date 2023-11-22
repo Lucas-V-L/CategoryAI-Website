@@ -9,7 +9,6 @@
 
 .bannercontainer {
 	overflow: hidden;
-	scroll-snap-align: start;
 }
 .boxcontainer {
 	--box-size: max(calc(calc(100vh + 100vw) / 20), 75px);

@@ -4,11 +4,9 @@
 
 html {
 	scroll-behavior: smooth;
-	scroll-snap-type: y proximity;
 }
 
 .block {
-	scroll-snap-align: start;
 	position: relative;
 	width: 100%;
 	min-height: 100vh;
