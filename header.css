@@ -155,7 +155,8 @@ nav .hamburger {
 		overflow-x: hidden;
 	}
 	nav #hamburger:checked ~ .buttons #selected {
-
+		padding-bottom: 5dvh;
+		height: 100% !important;
 	}
 	nav #hamburger:checked ~ .buttons > .buttoncontainer {
 		display: block;
