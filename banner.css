@@ -15,7 +15,7 @@
 	position: relative;
 	background-color: #212121;
 	width: calc(100vw + var(--box-size)); height: 100vh;
-	width: calc(100dvw + var(--box-size)); height: 100dvh;
+	width: calc(100dvw + var(--box-size)); height: 100vh;
 	perspective: 300px;
 	transform-style: preserve-3d;
 	font-size: 0px; /* removes gap between blocks for some reason. has to do with inline-block */
