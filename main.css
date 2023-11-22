@@ -1,3 +1,44 @@
-main {
-	font-face:
+:root {
+	--scrollpadding: 0px;
+}
+
+html {
+	scroll-behavior: smooth;
+	scroll-snap-type: y proximity;
+}
+
+.block {
+	scroll-snap-align: start;
+	position: relative;
+	width: 100%;
+	min-height: 100vh;
+	min-height: 100dvh;
+	box-sizing: border-box;
+	padding: 5%;
+	background-color: #222222;
+	color: white;
+	font-family: Arial, Verdana, sans-serif;
+	display: grid;
+	grid-template-columns: repeat(2, 1fr);
+	grid-template-rows: 1fr;
+	grid-column-gap: 10px;
+	grid-row-gap: 0px;
+}
+.block .blockimg {
+	background-size: contain;
+	background-repeat: no-repeat;
+	background-position: center;
+	width: 100%; height: 100%;
+}
+.block .blockcontent { 
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+}
+
+@media(max-width: 680px) {
+	.block {
+		grid-template-rows: 1fr 1fr;
+		grid-template-columns: 1fr;
+	}
 }

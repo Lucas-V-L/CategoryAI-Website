@@ -30,45 +30,64 @@
 				<div class="left"></div>
 				<div class="right"></div>
 				<div class="front"></div>
-			</div>
-
-			<script>
-				var elem = document.querySelector('#box');
-				for (let i = 0; i < 110; i++) {
-					var clone = elem.cloneNode(true);
-					clone.removeAttribute('id');
-					clone.style.setProperty("--animation-delay", (Math.random()*3)+"s");
-					clone.style.setProperty("--animation-duration", ((Math.random()*3)+1)+"s");
-					elem.after(clone);
-				}
-				var prevScrollpos = window.pageYOffset;
-				const mediaQuery = window.matchMedia('(min-width: 681px)');
-				const checkBox = document.getElementById("hamburger");
-				window.onscroll = function() {
-					var currentScrollPos = window.pageYOffset;
-					if (prevScrollpos > currentScrollPos) {
-						document.getElementById("navbar").style.top = "0";
-					} else if(mediaQuery.matches || ! checkBox.checked) {
-						document.getElementById("navbar").style.top = "-100px";
-					}
-					prevScrollpos = currentScrollPos;
-				}
-				window.onresize = function() {
-					if(mediaQuery.matches){
-						checkBox.checked = false;
-					}
-				}
-			</script>
+			</div>	
 		</div>
 		<div class="bannertext">
 			<h1>CATEGORY.AI</h1>
 			<p><nobr>The only all-in-one supply chain</nobr> <nobr>solution which puts AI first.</nobr></p>
 		</div>
+		<a class="scrollnext" href="#first"></a>
 	</div>
 
-	<main> 
-		<h1>Hello!</h1> 
-		<p>filler</p><p>filler</p><p>filler</p><p>filler</p><p>filler</p><p>filler</p><p>filler</p><p>filler</p><p>filler</p><p>filler</p><p>filler</p><p>filler</p><p>filler</p><p>filler</p><p>filler</p><p>filler</p><p>filler</p><p>filler</p><p>filler</p><p>filler</p><p>filler</p><p>filler</p><p>filler</p><p>filler</p><p>filler</p><p>filler</p><p>filler</p><p>filler</p><p>filler</p><p>filler</p><p>filler</p><p>filler</p><p>filler</p><p>filler</p><p>filler</p><p>filler</p><p>filler</p><p>filler</p><p>filler</p><p>filler</p><p>filler</p><p>filler</p><p>filler</p><p>filler</p><p>filler</p><p>filler</p><p>filler</p><p>filler</p><p>filler</p><p>filler</p><p>filler</p><p>filler</p><p>filler</p><p>filler</p><p>filler</p><p>filler</p><p>filler</p><p>filler</p><p>filler</p><p>filler</p><p>filler</p><p>filler</p><p>filler</p><p>filler</p><p>filler</p><p>filler</p><p>filler</p><p>filler</p><p>filler</p><p>filler</p><p>filler</p><p>filler</p><p>filler</p><p>filler</p><p>filler</p><p>filler</p><p>filler</p><p>filler</p><p>filler</p><p>filler</p><p>filler</p><p>filler</p><p>filler</p><p>filler</p><p>filler</p><p>filler</p><p>filler</p><p>filler</p><p>filler</p><p>filler</p><p>filler</p>	
+	<main>
+		<div class="block" id="first">
+			<div class="blockimg" style='background-image: url("img/infographic.png");'></div>
+			<div class="blockcontent">
+				<h1>Hello!</h1>
+				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Elit sed vulputate mi sit amet mauris. Mollis nunc sed id semper risus in hendrerit gravida. Amet commodo nulla facilisi nullam vehicula ipsum a arcu cursus. In dictum non consectetur a erat nam at. Sit amet est placerat in egestas erat imperdiet. Donec enim diam vulputate ut pharetra. Tellus orci ac auctor augue mauris augue neque gravida. Eu volutpat odio facilisis mauris sit. A cras semper auctor neque vitae tempus quam. Enim sit amet venenatis urna cursus eget nunc scelerisque. Id nibh tortor id aliquet lectus. Eget est lorem ipsum dolor. Habitasse platea dictumst vestibulum rhoncus. Aliquet sagittis id consectetur purus ut faucibus pulvinar elementum. Semper viverra nam libero justo. Auctor elit sed vulputate mi. Arcu risus quis varius quam. Sed elementum tempus egestas sed sed risus pretium quam vulputate. Gravida rutrum quisque non tellus orci ac auctor augue.</p>
+			</div>
+		</div>
+		<div class="block">
+			<div class="blockcontent">
+				<h1>Hello! (again)</h1>
+				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Elit sed vulputate mi sit amet mauris. Mollis nunc sed id semper risus in hendrerit gravida. Amet commodo nulla facilisi nullam vehicula ipsum a arcu cursus. In dictum non consectetur a erat nam at. Sit amet est placerat in egestas erat imperdiet. Donec enim diam vulputate ut pharetra. Tellus orci ac auctor augue mauris augue neque gravida. Eu volutpat odio facilisis mauris sit. A cras semper auctor neque vitae tempus quam. Enim sit amet venenatis urna cursus eget nunc scelerisque. Id nibh tortor id aliquet lectus. Eget est lorem ipsum dolor. Habitasse platea dictumst vestibulum rhoncus. Aliquet sagittis id consectetur purus ut faucibus pulvinar elementum. Semper viverra nam libero justo. Auctor elit sed vulputate mi. Arcu risus quis varius quam. Sed elementum tempus egestas sed sed risus pretium quam vulputate. Gravida rutrum quisque non tellus orci ac auctor augue.</p>
+			</div>
+			<div class="blockimg" style='background-image: url("img/dude.png");'></div>
+		</div>
 	</main>
 
 </body></html>
+
+
+<script>
+	var elem = document.querySelector('#box');
+	for (let i = 0; i < 110; i++) {
+		var clone = elem.cloneNode(true);
+		clone.removeAttribute('id');
+		clone.style.setProperty("--animation-delay", (Math.random()*3)+"s");
+		clone.style.setProperty("--animation-duration", ((Math.random()*3)+1)+"s");
+		elem.after(clone);
+	}
+	var r = document.querySelector(':root');
+	var prevScrollpos = Infinity;
+	window.onload = function() { prevScrollpos = Infinity; }
+	const mediaQuery = window.matchMedia('(min-width: 681px)');
+	const checkBox = document.getElementById("hamburger");
+	window.onscroll = function() {
+		var currentScrollPos = window.pageYOffset;
+		var rs = getComputedStyle(r);
+		if (prevScrollpos >= currentScrollPos || currentScrollPos == 0) {
+			document.getElementById("navbar").style.top = "0";
+			document.documentElement.style.setProperty("--scrollpadding", rs.getPropertyValue("--navbarheight").replace(" ", ""));
+		} else if(mediaQuery.matches || ! checkBox.checked) {
+			document.getElementById("navbar").style.top = "-" + rs.getPropertyValue("--navbarheight").replace(" ", "");
+			document.documentElement.style.setProperty("--scrollpadding", "0px");
+		}
+		prevScrollpos = currentScrollPos;
+	}
+	window.onresize = function() {
+		if(mediaQuery.matches){
+			checkBox.checked = false;
+		}
+	}
+</script>

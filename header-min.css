@@ -3,8 +3,11 @@
         src: url("fonts/jupiteroid-font/JupiteroidRegular.ttf") format('truetype');
 }
 
-nav {
+:root {
 	--navbarheight: 60px;
+}
+
+nav {
 	font-family: JupiteroidLight, Tahoma, 'Trebuchet MS', Arial, sans-serif;
 	font-size: 1.6em;
 	transition: top 0.75s;
