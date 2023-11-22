@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="en"> <head>
-	<link rel="stylesheet" href="header-min.css">
+	<link rel="stylesheet" href="header.css">
 	<link rel="stylesheet" href="banner.css">
 	<link rel="stylesheet" href="main.css">
 	<script src="scripts/prefixfree.min.js"></script>
@@ -11,15 +11,16 @@
         <input id="hamburger" name="hamburger" type="checkbox"/>
 	<label class="hamburger" for="hamburger"></label>
 	<div class="buttons">
+		<a class="filler"></a>
+		<a class="buttoncontainer home" id="selected"><div>Home</div></a>
 		<a class="buttoncontainer" href="about.html"><div>About</div></a>
 		<a class="buttoncontainer" href="uses.html"><div><nobr>Use Cases</nobr></div></a>
 		<a class="buttoncontainer" href="platform.html"><div>Platform</div></a>
 		<a class="buttoncontainer" href="investor_info.html"><div><nobr>Investor Info</nobr></div></a>
 		<a class="buttoncontainer" href="team.html"><div>Team</div></a>
 		<a class="buttoncontainer" href="contact.html"><div>Contact</div></a>
-		<a class="buttoncontainer home" id="selected"><div>Home</div></a>
 	</div>
-	<a href="index.html" class="logocontainer"><img class="logo" src="img/logo-small-transparent.png"/></a>
+	<a href="./" class="logocontainer"><img class="logo" src="img/logo-small-transparent.png"/></a>
 </nav>
 
 <body>
@@ -79,10 +80,8 @@
 		var rs = getComputedStyle(r);
 		if (prevScrollpos >= currentScrollPos || currentScrollPos == 0) {
 			document.getElementById("navbar").style.top = "0";
-			document.documentElement.style.setProperty("--scrollpadding", rs.getPropertyValue("--navbarheight").replace(" ", ""));
 		} else if(mediaQuery.matches || ! checkBox.checked) {
 			document.getElementById("navbar").style.top = "-" + rs.getPropertyValue("--navbarheight").replace(" ", "");
-			document.documentElement.style.setProperty("--scrollpadding", "0px");
 		}
 		prevScrollpos = currentScrollPos;
 	}

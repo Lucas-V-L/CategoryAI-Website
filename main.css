@@ -1,7 +1,3 @@
-:root {
-	--scrollpadding: 0px;
-}
-
 html {
 	scroll-behavior: smooth;
 }
